@@ -13,6 +13,16 @@ Kieran's minimal and almost classless CSS
 * <https://web.archive.org/web/20230319011535/https://vistaserv.net/blog/90s-fonts-modern-browsers>
 * <https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/>
 
+## Development
+
+```bash
+npm ci
+npm run lint    # biome
+npm run format  # biome, writes
+npm run fonts   # re-download the fonts from fontsource into static/fonts
+npm test        # playwright, checks the fonts actually load
+```
+
 ## Deploy
 
 Navigate to the folder you want the static folder to be placed in.

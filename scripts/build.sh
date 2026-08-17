@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+cd "$(dirname "$0")/.." # Run from the repo root
+
 do_heading() {
   local message="$1"
 
