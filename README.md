@@ -16,11 +16,11 @@ Kieran's minimal and almost classless CSS
 ## Development
 
 ```bash
-npm ci
-npm run lint    # biome
-npm run format  # biome, writes
-npm run fonts   # re-download the fonts from fontsource into static/fonts
-npm test        # playwright, checks the fonts actually load
+bun install
+bun run lint    # biome
+bun run format  # biome, writes
+bun run fonts   # re-download the fonts from fontsource into static/fonts
+bun run test    # playwright, checks the fonts actually load
 ```
 
 ## Deploy
