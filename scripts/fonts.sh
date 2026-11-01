@@ -5,7 +5,7 @@ set -e
 
 cd "$(dirname "$0")/.." # Run from the repo root
 
-bun install
+pnpm install
 
 rm -f static/fonts/*.woff2
 

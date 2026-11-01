@@ -16,6 +16,7 @@ jobs:
         run: cat dist/grab.sh
 
       - name: Update Nightly Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: andelf/nightly-release@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

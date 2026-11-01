@@ -1,6 +1,7 @@
 {
   "name": "zy.css",
   "version": "1.0.0",
+  "packageManager": "pnpm@12.11.2",
   "main": "index.js",
   "scripts": {
     "test": "playwright test",

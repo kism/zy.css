@@ -8,8 +8,13 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: oven-sh/setup-bun@v2
+      - uses: pnpm/action-setup@v6
 
-      - run: bun install --frozen-lockfile
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: pnpm
 
-      - run: bun run lint
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm run lint

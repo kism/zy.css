@@ -8,11 +8,16 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: oven-sh/setup-bun@v2
+      - uses: pnpm/action-setup@v6
 
-      - run: bun install --frozen-lockfile
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: pnpm
 
-      - run: bunx playwright install --with-deps chromium
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm exec playwright install --with-deps chromium
 
       - name: Check the fonts load
-        run: bun run test
+        run: pnpm run test
